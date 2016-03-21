@@ -40,7 +40,7 @@ Keys for sorting and defining information.
 
 4. `tags > forced` = Boolean. Whether or not creation-commands (`/summon`, `/entitydata`, `/setblock`, `/give`, etc.) requires the datatype of the tag to be declared. Only relevant for numerical datatypes Byte, Short, Integer, Long, Float, Double. Note that testing commands (`/scoreboard`, `/testfor`, `/testforblock`, etc.) requires correct declaration no matter what. All other datatypes (String, IntArray, Compound, List) requires correct declaration, while Lists requires internal data to be specified correctly. Defaults to false.
 
-5. `tags > deprecated` = String. Specifies the name of the tag that overrides this one, indicating deprecation. If null, tag is not deprecated. Defaults to null.
+5. `tags > deprecated` = String. Specifies the name of the tag that overrides this one, indicating deprecation. Syntax is "type:name", where "type" is the datatype of the replacement tag and "name" is the tagname of the replacement tag. If null, tag is not deprecated. Defaults to null.
 
 6. `tags > minValues` = Array of doubles. The minimum value for tag input. Each index corresponds with the tag's input index. A value of `minValues:[-180.0,-90.0]` means the first value within the input List tag must have a minimum value of -180.0, while the second value must have a minimum of -90.0. The minimums will repeat if there are more values defined in the List tag than there are in the `minValues` array (provided the `keyLimits` are not exceeded). If it's just a single-value tag, such as a Short, only one value is necessary in the array and the rest are ignored. If empty, no minimum values. If any value within the array is null, no minimum for that index.
 
