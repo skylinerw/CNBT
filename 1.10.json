@@ -107,6 +107,11 @@
                     "permissions": {
                         "read": false
                     }
+                },
+                {
+                    "id": "NoGravity",
+                    "type": "Byte",
+                    "isBoolean": true
                 }
             ],
             "inherit": [
@@ -1366,11 +1371,6 @@
                     "type": "Integer"
                 },
                 {
-                    "id": "NoGravity",
-                    "type": "Byte",
-                    "isBoolean": true
-                },
-                {
                     "id": "NoBasePlate",
                     "type": "Byte",
                     "isBoolean": true
@@ -1813,7 +1813,8 @@
                 {
                     "id": "IsVillager",
                     "type": "Byte",
-                    "isBoolean": true
+                    "isBoolean": true,
+                    "deprecated": "Integer:ZombieType"
                 },
                 {
                     "id": "ConversionTime",
@@ -1826,6 +1827,11 @@
                 },
                 {
                     "id": "VillagerProfession",
+                    "type": "Integer",
+                    "deprecated": "Integer:ZombieType"
+                },
+                {
+                    "id": "ZombieType",
                     "type": "Integer"
                 }
             ]
@@ -2208,6 +2214,21 @@
                 },
                 {
                     "id": "ignoreEntities",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "showair",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "showboundingbox",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "powered",
                     "type": "Byte",
                     "isBoolean": true
                 }
