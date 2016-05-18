@@ -1623,6 +1623,15 @@
             ]
         },
         {
+            "name": "PolarBear",
+            "id": 102,
+            "parent": "Animal",
+            "eggColors": [
+                15921906,
+                9803152
+            ]
+        },
+        {
             "name": "Pig",
             "id": 90,
             "parent": "Animal",
