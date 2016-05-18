@@ -1,0 +1,3137 @@
+{
+    "entity": [
+        {
+            "name": "Entity",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "id",
+                    "type": "String",
+                    "permissions": {
+                        "read": false,
+                        "write": false,
+                        "saveOnly": true
+                    }
+                },
+                {
+                    "id": "Pos",
+                    "type": "List/Double",
+                    "keyLimit": {
+                        "max": 3
+                    }
+                },
+                {
+                    "id": "Motion",
+                    "type": "List/Double",
+                    "keyLimit": {
+                        "max": 3
+                    },
+                    "minValues": [-10.0],
+                    "maxValues": [10.0],
+                    "correctedValues": [0.0]
+                },
+                {
+                    "id": "Rotation",
+                    "type": "List/Float",
+                    "keyLimit": {
+                        "max": 2
+                    }
+                },
+                {
+                    "id": "FallDistance",
+                    "type": "Float"
+                },
+                {
+                    "id": "Fire",
+                    "type": "Short"
+                },
+                {
+                    "id": "Air",
+                    "type": "Short"
+                },
+                {
+                    "id": "OnGround",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Dimension",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Invulnerable",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "PortalCooldown",
+                    "type": "Integer"
+                },
+                {
+                    "id": "UUIDLeast",
+                    "type": "Long"
+                },
+                {
+                    "id": "UUIDMost",
+                    "type": "Long"
+                },
+                {
+                    "id": "CustomName",
+                    "type": "String"
+                },
+                {
+                    "id": "CustomNameVisible",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Silent",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Glowing",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Tags",
+                    "type": "List/String",
+                    "keyLimit": {
+                        "max": 1024
+                    }
+                },
+                {
+                    "id": "Passengers",
+                    "type": "List/Compound",
+                    "permissions": {
+                        "read": false
+                    }
+                }
+            ],
+            "inherit": [
+                "misc:CommandStats"
+            ]
+        },
+        {
+            "name": "LivingBase",
+            "parent": "Entity",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "AbsorptionAmount",
+                    "type": "Float"
+                },
+                {
+                    "id": "Attributes",
+                    "type": "List/Compound",
+                    "inherit": [
+                        "misc:Attributes"
+                    ]
+                },
+                {
+                    "id": "ActiveEffects",
+                    "type": "List/Compound",
+                    "inherit": [
+                        "misc:CustomPotionEffects"
+                    ]
+                },
+                {
+                    "id": "Health",
+                    "type": "Float"
+                },
+                {
+                    "id": "HurtTime",
+                    "type": "Short"
+                },
+                {
+                    "id": "DeathTime",
+                    "type": "Short"
+                },
+                {
+                    "id": "HurtByTimestamp",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Team",
+                    "type": "String",
+                    "permissions": {
+                        "write": false
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Living",
+            "parent": "LivingBase",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "PersistenceRequired",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "CanPickUpLoot",
+                    "type": "Byte",
+                    "isBoolean": true,
+                    "forced": true
+                },
+                {
+                    "id": "HandItems",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 2
+                    }
+                },
+                {
+                    "id": "ArmorItems",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 4
+                    }
+                },
+                {
+                    "id": "HandDropChances",
+                    "type": "List/Float",
+                    "keyLimit": {
+                        "max": 2
+                    }
+                },
+                {
+                    "id": "ArmorDropChances",
+                    "type": "List/Float",
+                    "keyLimit": {
+                        "max": 4
+                    }
+                },
+                {
+                    "id": "LeftHanded",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Leashed",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Leash",
+                    "type": "Compound",
+                    "tags": [
+                        {
+                            "id": "X",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "Y",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "Z",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "UUIDLeast",
+                            "type": "Long"
+                        },
+                        {
+                            "id": "UUIDMost",
+                            "type": "Long"
+                        }
+                    ]
+                },
+                {
+                    "id": "NoAI",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "DeathLootTable",
+                    "type": "String"
+                },
+                {
+                    "id": "DeathLootTableSeed",
+                    "type": "Long"
+                }
+            ]
+        },
+        {
+            "name": "Ambient",
+            "parent": "Living",
+            "savegame": false
+        },
+        {
+            "name": "Flying",
+            "parent": "Living",
+            "savegame": false
+        },
+        {
+            "name": "Creature",
+            "parent": "Living",
+            "savegame": false
+        },
+        {
+            "name": "Golem",
+            "parent": "Creature",
+            "savegame": false
+        },
+        {
+            "name": "Monster",
+            "parent": "Creature",
+            "savegame": false
+        },
+        {
+            "name": "Ageable",
+            "parent": "Creature",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "Age",
+                    "type": "Integer"
+                },
+                {
+                    "id": "ForcedAge",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Animal",
+            "parent": "Ageable",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "InLove",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Tameable",
+            "parent": "Animal",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "OwnerUUID",
+                    "type": "String"
+                },
+                {
+                    "id": "Owner",
+                    "type": "String",
+                    "deprecated": "String:OwnerUUID"
+                },
+                {
+                    "id": "Sitting",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "Player",
+            "parent": "LivingBase",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "DataVersion",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Inventory",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 40
+                    },
+                    "inherit": [
+                        "item:ItemSlot"
+                    ]
+                },
+                {
+                    "id": "SelectedItemSlot",
+                    "type": "Integer",
+                    "minValues": [0.0],
+                    "maxValues": [1.0]
+                },
+                {
+                    "id": "Sleeping",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "SleepTimer",
+                    "type": "Short"
+                },
+                {
+                    "id": "XpP",
+                    "type": "Float"
+                },
+                {
+                    "id": "XpLevel",
+                    "type": "Integer"
+                },
+                {
+                    "id": "XpTotal",
+                    "type": "Integer"
+                },
+                {
+                    "id": "XpSeed",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Score",
+                    "type": "Integer"
+                },
+                {
+                    "id": "SpawnX",
+                    "type": "Integer"
+                },
+                {
+                    "id": "SpawnY",
+                    "type": "Integer"
+                },
+                {
+                    "id": "SpawnZ",
+                    "type": "Integer"
+                },
+                {
+                    "id": "SpawnForced",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "foodLevel",
+                    "type": "Integer"
+                },
+                {
+                    "id": "foodTickTimer",
+                    "type": "Integer"
+                },
+                {
+                    "id": "foodSaturationLevel",
+                    "type": "Float"
+                },
+                {
+                    "id": "foodExhaustionLevel",
+                    "type": "Float"
+                },
+                {
+                    "id": "EnderItems",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 27
+                    }
+                },
+                {
+                    "id": "SelectedItem",
+                    "type": "Compound",
+                    "permissions": {
+                        "read": false,
+                        "write": false
+                    },
+                    "inherit": [
+                        "item:Item"
+                    ],
+                    "__comment": "Only used during commands, never actually exists on the player."
+                },
+                {
+                    "id": "playerGameType",
+                    "type": "Integer"
+                },
+                {
+                    "id": "RootVehicle",
+                    "type": "Compound",
+                    "permissions": {
+                        "read": false
+                    },
+                    "tags": [
+                        {
+                            "id": "AttachLeast",
+                            "type": "Long"
+                        },
+                        {
+                            "id": "AttachMost",
+                            "type": "Long"
+                        },
+                        {
+                            "id": "Entity",
+                            "type": "Compound",
+                            "tags": [
+                                {
+                                    "id": "id",
+                                    "type": "String"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "abilities",
+                    "type": "Compound",
+                    "tags": [
+                        {
+                            "id": "invulnerable",
+                            "type": "Byte",
+                            "isBoolean": true
+                        },
+                        {
+                            "id": "flying",
+                            "type": "Byte",
+                            "isBoolean": true
+                        },
+                        {
+                            "id": "mayfly",
+                            "type": "Byte",
+                            "isBoolean": true
+                        },
+                        {
+                            "id": "instabuild",
+                            "type": "Byte",
+                            "isBoolean": true
+                        },
+                        {
+                            "id": "mayBuild",
+                            "type": "Byte",
+                            "isBoolean": true,
+                            "forced": true
+                        },
+                        {
+                            "id": "flySpeed",
+                            "type": "Float"
+                        },
+                        {
+                            "id": "walkSpeed",
+                            "type": "Float"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Throwable",
+            "parent": "Entity",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "xTile",
+                    "type": "Integer"
+                },
+                {
+                    "id": "yTile",
+                    "type": "Integer"
+                },
+                {
+                    "id": "zTile",
+                    "type": "Integer"
+                },
+                {
+                    "id": "inTile",
+                    "type": "String"
+                },
+                {
+                    "id": "inTile",
+                    "type": "Byte",
+                    "deprecated": "String:inTile"
+                },
+                {
+                    "id": "shake",
+                    "type": "Byte"
+                },
+                {
+                    "id": "inGround",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "ownerName",
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "name": "Hanging",
+            "parent": "Entity",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "Facing",
+                    "type": "Byte",
+                    "minValues": [0.0],
+                    "maxValues": [3.0]
+                },
+                {
+                    "id": "TileX",
+                    "type": "Integer"
+                },
+                {
+                    "id": "TileY",
+                    "type": "Integer"
+                },
+                {
+                    "id": "TileZ",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "FireballBase",
+            "parent": "Entity",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "xTile",
+                    "type": "Integer"
+                },
+                {
+                    "id": "yTile",
+                    "type": "Integer"
+                },
+                {
+                    "id": "zTile",
+                    "type": "Integer"
+                },
+                {
+                    "id": "inTile",
+                    "type": "String"
+                },
+                {
+                    "id": "inTile",
+                    "type": "Byte",
+                    "deprecated": "String:inTile"
+                },
+                {
+                    "id": "inGround",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "direction",
+                    "type": "List/Double",
+                    "keyLimit": {
+                        "min": 3,
+                        "max": 3
+                    }
+                },
+                {
+                    "id": "life",
+                    "type": "Integer"
+                },
+                {
+                    "id": "power",
+                    "type": "List/Double",
+                    "keyLimit": {
+                        "min": 3,
+                        "max": 3
+                    }
+                }
+            ]
+        },
+        {
+            "name": "MinecartBase",
+            "parent": "Entity",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "CustomDisplayTile",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "DisplayTile",
+                    "type": "String"
+                },
+                {
+                    "id": "DisplayTile",
+                    "type": "Integer",
+                    "deprecated": "String:DisplayTile"
+                },
+                {
+                    "id": "DisplayData",
+                    "type": "Integer"
+                },
+                {
+                    "id": "DisplayOffset",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "MinecartLootable",
+            "parent": "MinecartBase",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "LootTable",
+                    "type": "String"
+                },
+                {
+                    "id": "LootTableSeed",
+                    "type": "Long"
+                }
+            ]
+        },
+        {
+            "name": "ArrowBase",
+            "parent": "Entity",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "xTile",
+                    "type": "Integer"
+                },
+                {
+                    "id": "yTile",
+                    "type": "Integer"
+                },
+                {
+                    "id": "zTile",
+                    "type": "Integer"
+                },
+                {
+                    "id": "inTile",
+                    "type": "String"
+                },
+                {
+                    "id": "inTile",
+                    "type": "Byte",
+                    "deprecated": "String:inTile"
+                },
+                {
+                    "id": "inData",
+                    "type": "Byte"
+                },
+                {
+                    "id": "shake",
+                    "type": "Byte"
+                },
+                {
+                    "id": "inGround",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "life",
+                    "type": "Short"
+                },
+                {
+                    "id": "damage",
+                    "type": "Double"
+                },
+                {
+                    "id": "pickup",
+                    "type": "Byte"
+                },
+                {
+                    "id": "player",
+                    "type": "Byte",
+                    "isBoolean": true,
+                    "deprecated": "Byte:pickup"
+                }
+            ]
+        },
+        {
+            "name": "WaterMob",
+            "parent": "Living",
+            "savegame": false
+        },
+        {
+            "name": "FishingBobber",
+            "parent": "Entity",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "xTile",
+                    "type": "Integer"
+                },
+                {
+                    "id": "yTile",
+                    "type": "Integer"
+                },
+                {
+                    "id": "zTile",
+                    "type": "Integer"
+                },
+                {
+                    "id": "inTile",
+                    "type": "String"
+                },
+                {
+                    "id": "inTile",
+                    "type": "Byte",
+                    "deprecated": "String:inTile"
+                },
+                {
+                    "id": "inGround",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "MinecartRideable",
+            "id": 42,
+            "parent": "MinecartBase"
+        },
+        {
+            "name": "MinecartFurnace",
+            "id": 44,
+            "parent": "MinecartBase",
+            "tags": [
+                {
+                    "id": "PushX",
+                    "type": "Double"
+                },
+                {
+                    "id": "PushZ",
+                    "type": "Double"
+                },
+                {
+                    "id": "Fuel",
+                    "type": "Short"
+                }
+            ]
+        },
+        {
+            "name": "MinecartChest",
+            "id": 43,
+            "parent": "MinecartLootable",
+            "tags": [
+                {
+                    "id": "Items",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 27
+                    },
+                    "inherit": [
+                        "item:ItemSlot"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "MinecartHopper",
+            "id": 46,
+            "parent": "MinecartLootable",
+            "tags": [
+                {
+                    "id": "Items",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 5
+                    },
+                    "inherit": [
+                        "item:ItemSlot"
+                    ]
+                },
+                {
+                    "id": "TransferCooldown",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Enabled",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "MinecartSpawner",
+            "id": 47,
+            "parent": "MinecartBase",
+            "inherit": [
+                "misc:SpawnerLogic"
+            ]
+        },
+        {
+            "name": "MinecartTNT",
+            "id": 45,
+            "parent": "MinecartBase",
+            "tags": [
+                {
+                    "id": "TNTFuse",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "MinecartCommandBlock",
+            "id": 40,
+            "parent": "MinecartBase",
+            "inherit": [
+                "misc:CommandBlockLogic"
+            ]
+        },
+        {
+            "name": "ShulkerBullet",
+            "id": 25,
+            "parent": "Entity",
+            "tags": [
+                {
+                    "id": "Steps",
+                    "type": "Integer"
+                },
+                {
+                    "id": "TXD",
+                    "type": "Double"
+                },
+                {
+                    "id": "TYD",
+                    "type": "Double"
+                },
+                {
+                    "id": "TZD",
+                    "type": "Double"
+                },
+                {
+                    "id": "Dir",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Owner",
+                    "type": "Compound",
+                    "tags": [
+                        {
+                            "id": "X",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "Y",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "Z",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "L",
+                            "type": "Long"
+                        },
+                        {
+                            "id": "M",
+                            "type": "Long"
+                        }
+                    ]
+                },
+                {
+                    "id": "Target",
+                    "type": "Compound",
+                    "tags": [
+                        {
+                            "id": "X",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "Y",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "Z",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "L",
+                            "type": "Long"
+                        },
+                        {
+                            "id": "M",
+                            "type": "Long"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "LeashKnot",
+            "id": 8,
+            "parent": "Hanging",
+            "ignoreInheritance": true,
+            "disk": false
+        },
+        {
+            "name": "WitherSkull",
+            "id": 19,
+            "parent": "FireballBase"
+        },
+        {
+            "name": "SmallFireball",
+            "id": 13,
+            "parent": "FireballBase"
+        },
+        {
+            "name": "Fireball",
+            "id": 12,
+            "parent": "FireballBase",
+            "tags": [
+                {
+                    "id": "ExplosionPower",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "DragonFireball",
+            "id": 26,
+            "parent": "FireballBase"
+        },
+        {
+            "name": "Snowball",
+            "id": 11,
+            "parent": "Throwable"
+        },
+        {
+            "name": "AreaEffectCloud",
+            "id": 3,
+            "parent": "Entity",
+            "tags": [
+                {
+                    "id": "Age",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Duration",
+                    "type": "Integer"
+                },
+                {
+                    "id": "WaitTime",
+                    "type": "Integer"
+                },
+                {
+                    "id": "ReapplicationDelay",
+                    "type": "Integer"
+                },
+                {
+                    "id": "DurationOnUse",
+                    "type": "Integer"
+                },
+                {
+                    "id": "RadiusOnUse",
+                    "type": "Float"
+                },
+                {
+                    "id": "RadiusPerTick",
+                    "type": "Float"
+                },
+                {
+                    "id": "Radius",
+                    "type": "Float"
+                },
+                {
+                    "id": "OwnerUUIDLeast",
+                    "type": "Long"
+                },
+                {
+                    "id": "OwnerUUIDMost",
+                    "type": "Long"
+                },
+                {
+                    "id": "Particle",
+                    "type": "String"
+                },
+                {
+                    "id": "Color",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Effects",
+                    "type": "List/Compound",
+                    "inherit": [
+                        "misc:CustomPotionEffects"
+                    ]
+                },
+                {
+                    "id": "Potion",
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "name": "ThrownPotion",
+            "id": 16,
+            "parent": "Throwable",
+            "tags": [
+                {
+                    "id": "Potion",
+                    "type": "Compound",
+                    "inherit": [
+                        "item:Item"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ThrownEgg",
+            "id": 7,
+            "parent": "Throwable"
+        },
+        {
+            "name": "Arrow",
+            "id": 10,
+            "parent": "ArrowBase",
+            "tags": [
+                {
+                    "id": "Potion",
+                    "type": "String"
+                },
+                {
+                    "id": "CustomPotionEffects",
+                    "type": "List/Compound",
+                    "inherit": [
+                        "misc:CustomPotionEffects"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "SpectralArrow",
+            "id": 24,
+            "parent": "ArrowBase",
+            "tags": [
+                {
+                    "id": "Duration",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "XPOrb",
+            "id": 2,
+            "parent": "Entity",
+            "tags": [
+                {
+                    "id": "Health",
+                    "type": "Short"
+                },
+                {
+                    "id": "Age",
+                    "type": "Short"
+                },
+                {
+                    "id": "Value",
+                    "type": "Short"
+                }
+            ]
+        },
+        {
+            "name": "PrimedTnt",
+            "id": 20,
+            "parent": "Entity",
+            "tags": [
+                {
+                    "id": "Fuse",
+                    "type": "Short"
+                }
+            ]
+        },
+        {
+            "name": "Painting",
+            "id": 9,
+            "parent": "Hanging",
+            "tags": [
+                {
+                    "id": "Motive",
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "name": "ItemFrame",
+            "id": 18,
+            "parent": "Hanging",
+            "tags": [
+                {
+                    "id": "ItemRotation",
+                    "type": "Byte",
+                    "minValues": [0.0],
+                    "maxValues": [8.0]
+                },
+                {
+                    "id": "ItemDropChance",
+                    "type": "Float"
+                },
+                {
+                    "id": "Item",
+                    "type": "Compound",
+                    "inherit": [
+                        "item:Item"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Item",
+            "id": 1,
+            "parent": "Entity",
+            "tags": [
+                {
+                    "id": "Health",
+                    "type": "Short"
+                },
+                {
+                    "id": "Age",
+                    "type": "Short"
+                },
+                {
+                    "id": "PickupDelay",
+                    "type": "Short"
+                },
+                {
+                    "id": "Owner",
+                    "type": "String"
+                },
+                {
+                    "id": "Thrower",
+                    "type": "String"
+                },
+                {
+                    "id": "Item",
+                    "type": "Compound",
+                    "inherit": [
+                        "item:Item"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FireworksRocketEntity",
+            "id": 22,
+            "parent": "Entity",
+            "tags": [
+                {
+                    "id": "Life",
+                    "type": "Integer"
+                },
+                {
+                    "id": "LifeTime",
+                    "type": "Integer"
+                },
+                {
+                    "id": "FireworksItem",
+                    "type": "Compound",
+                    "inherit": [
+                        "item:Item"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FallingSand",
+            "id": 21,
+            "parent": "Entity",
+            "tags": [
+                {
+                    "id": "Block",
+                    "type": "String"
+                },
+                {
+                    "id": "TileID",
+                    "type": "Integer",
+                    "deprecated": "String:Block"
+                },
+                {
+                    "id": "Tile",
+                    "type": "Byte",
+                    "deprecated": "Integer:TileID"
+                },
+                {
+                    "id": "Data",
+                    "type": "Byte"
+                },
+                {
+                    "id": "Time",
+                    "type": "Integer"
+                },
+                {
+                    "id": "HurtEntities",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "FallHurtAmount",
+                    "type": "Float"
+                },
+                {
+                    "id": "FallHurtMax",
+                    "type": "Integer"
+                },
+                {
+                    "id": "DropItem",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "TileEntityData",
+                    "type": "Compound"
+                }
+            ]
+        },
+        {
+            "name": "ThrownExpBottle",
+            "id": 17,
+            "parent": "Throwable"
+        },
+        {
+            "name": "ThrownEnderpearl",
+            "id": 14,
+            "parent": "Throwable"
+        },
+        {
+            "name": "EyeOfEnderSignal",
+            "id": 15,
+            "parent": "Entity"
+        },
+        {
+            "name": "EnderCrystal",
+            "id": 200,
+            "parent": "Entity",
+            "tags": [
+                {
+                    "id": "ShowBottom",
+                    "type": "Byte",
+                    "isBoolean": true,
+                    "forced": true
+                },
+                {
+                    "id": "BeamTarget",
+                    "type": "Compound",
+                    "tags": [
+                        {
+                            "id": "X",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "Y",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "Z",
+                            "type": "Integer"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Boat",
+            "id": 41,
+            "parent": "Entity",
+            "tags": [
+                {
+                    "id": "Type",
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "name": "ArmorStand",
+            "id": 30,
+            "parent": "LivingBase",
+            "tags": [
+                {
+                    "id": "HandItems",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 2
+                    },
+                    "inherit": [
+                        "item:Item"
+                    ]
+                },
+                {
+                    "id": "ArmorItems",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 4
+                    },
+                    "inherit": [
+                        "item:Item"
+                    ]
+                },
+                {
+                    "id": "Invisible",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Small",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "ShowArms",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "DisabledSlots",
+                    "type": "Integer"
+                },
+                {
+                    "id": "NoGravity",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "NoBasePlate",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Marker",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Pose",
+                    "type": "Compound",
+                    "tags": [
+                        {
+                            "id": "Head",
+                            "type": "List/Float",
+                            "keyLimit": {
+                                "max": 3
+                            }
+                        },
+                        {
+                            "id": "Body",
+                            "type": "List/Float",
+                            "keyLimit": {
+                                "max": 3
+                            }
+                        },
+                        {
+                            "id": "LeftArm",
+                            "type": "List/Float",
+                            "keyLimit": {
+                                "max": 3
+                            }
+                        },
+                        {
+                            "id": "RightArm",
+                            "type": "List/Float",
+                            "keyLimit": {
+                                "max": 3
+                            }
+                        },
+                        {
+                            "id": "LeftLeg",
+                            "type": "List/Float",
+                            "keyLimit": {
+                                "max": 3
+                            }
+                        },
+                        {
+                            "id": "RightLeg",
+                            "type": "List/Float",
+                            "keyLimit": {
+                                "max": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "WeatherEffect",
+            "parent": "Entity",
+            "savegame": false
+        },
+        {
+            "name": "LightningBolt",
+            "parent": "WeatherEffect",
+            "savegame": false,
+            "ignoreInheritance": true
+        },
+        {
+            "name": "EnderDragon",
+            "id": 63,
+            "parent": "Living",
+            "tags": [
+                {
+                    "id": "DragonPhase",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "DragonPart",
+            "parent": "Entity",
+            "savegame": false
+        },
+        {
+            "name": "WitherBoss",
+            "id": 64,
+            "parent": "Monster",
+            "tags": [
+                {
+                    "id": "Invul",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Wolf",
+            "id": 95,
+            "parent": "Tameable",
+            "eggColors": [
+                14144467,
+                13545366
+            ],
+            "tags": [
+                {
+                    "id": "Angry",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "CollarColor",
+                    "type": "Byte"
+                }
+            ]
+        },
+        {
+            "name": "Villager",
+            "id": 120,
+            "parent": "Ageable",
+            "eggColors": [
+                5651507,
+                12422002
+            ],
+            "tags": [
+                {
+                    "id": "Profession",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Riches",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Career",
+                    "type": "Integer"
+                },
+                {
+                    "id": "CareerLevel",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Willing",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Offers",
+                    "type": "Compound",
+                    "tags": [
+                        {
+                            "id": "Recipes",
+                            "type": "List/Compound",
+                            "tags": [
+                                {
+                                    "id": "rewardExp",
+                                    "type": "Byte",
+                                    "isBoolean": true,
+                                    "forced": true
+                                },
+                                {
+                                    "id": "uses",
+                                    "type": "Integer"
+                                },
+                                {
+                                    "id": "maxUses",
+                                    "type": "Integer"
+                                },
+                                {
+                                    "id": "buy",
+                                    "type": "Compound",
+                                    "inherit": [
+                                        "item:Item"
+                                    ]
+                                },
+                                {
+                                    "id": "buyB",
+                                    "type": "Compound",
+                                    "inherit": [
+                                        "item:Item"
+                                    ]
+                                },
+                                {
+                                    "id": "sell",
+                                    "type": "Compound",
+                                    "inherit": [
+                                        "item:Item"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "Inventory",
+                    "type": "List/Compound",
+                    "inherit": [
+                        "item:Item"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Squid",
+            "id": 94,
+            "parent": "WaterMob",
+            "eggColors": [
+                2243405,
+                7375001
+            ]
+        },
+        {
+            "name": "Sheep",
+            "id": 91,
+            "parent": "Animal",
+            "eggColors": [
+                15198183,
+                16758197
+            ],
+            "tags": [
+                {
+                    "id": "Sheared",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Color",
+                    "type": "Byte"
+                }
+            ]
+        },
+        {
+            "name": "Rabbit",
+            "id": 101,
+            "parent": "Animal",
+            "eggColors": [
+                10051392,
+                7555121
+            ],
+            "tags": [
+                {
+                    "id": "RabbitType",
+                    "type": "Integer"
+                },
+                {
+                    "id": "MoreCarrotTicks",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Pig",
+            "id": 90,
+            "parent": "Animal",
+            "eggColors": [
+                15771042,
+                14377823
+            ],
+            "tags": [
+                {
+                    "id": "Saddle",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "Ozelot",
+            "id": 98,
+            "parent": "Tameable",
+            "eggColors": [
+                15720061,
+                5653556
+            ],
+            "tags": [
+                {
+                    "id": "CatType",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "MushroomCow",
+            "id": 96,
+            "parent": "Cow",
+            "eggColors": [
+                10489616,
+                12040119
+            ]
+        },
+        {
+            "name": "EntityHorse",
+            "id": 100,
+            "parent": "Animal",
+            "eggColors": [
+                12623485,
+                15656192
+            ],
+            "tags": [
+                {
+                    "id": "EatingHaystack",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Bred",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "ChestedHorse",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "HasReproduced",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "Type",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Variant",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Temper",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Tame",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "OwnerUUID",
+                    "type": "String"
+                },
+                {
+                    "id": "Owner",
+                    "type": "String",
+                    "deprecated": "String:OwnerUUID"
+                },
+                {
+                    "id": "Items",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 17
+                    },
+                    "inherit": [
+                        "item:ItemSlot"
+                    ]
+                },
+                {
+                    "id": "ArmorItem",
+                    "type": "Compound",
+                    "inherit": [
+                        "item:Item"
+                    ]
+                },
+                {
+                    "id": "SaddleItem",
+                    "type": "Compound",
+                    "inherit": [
+                        "item:Item"
+                    ]
+                },
+                {
+                    "id": "SkeletonTrap",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "SkeletonTrapTime",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Cow",
+            "id": 92,
+            "parent": "Animal",
+            "eggColors": [
+                4470310,
+                10592673
+            ]
+        },
+        {
+            "name": "Chicken",
+            "id": 93,
+            "parent": "Animal",
+            "eggColors": [
+                10592673,
+                16711680
+            ],
+            "tags": [
+                {
+                    "id": "IsChickenJockey",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "EggLayTime",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Bat",
+            "id": 65,
+            "parent": "Ambient",
+            "eggColors": [
+                4996656,
+                986895
+            ],
+            "tags": [
+                {
+                    "id": "BatFlags",
+                    "type": "Byte"
+                }
+            ]
+        },
+        {
+            "name": "Zombie",
+            "id": 54,
+            "parent": "Monster",
+            "eggColors": [
+                44975,
+                7969893
+            ],
+            "tags": [
+                {
+                    "id": "IsBaby",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "IsVillager",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "ConversionTime",
+                    "type": "Integer"
+                },
+                {
+                    "id": "CanBreakDoors",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "VillagerProfession",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Witch",
+            "id": 66,
+            "parent": "Monster",
+            "eggColors": [
+                3407872,
+                5349438
+            ]
+        },
+        {
+            "name": "Spider",
+            "id": 52,
+            "parent": "Monster",
+            "eggColors": [
+                3419431,
+                11013646
+            ]
+        },
+        {
+            "name": "SnowMan",
+            "id": 97,
+            "parent": "Golem"
+        },
+        {
+            "name": "Shulker",
+            "id": 69,
+            "parent": "Golem",
+            "eggColors": [
+                9725844,
+                5060690
+            ],
+            "tags": [
+                {
+                    "id": "Peek",
+                    "type": "Byte"
+                },
+                {
+                    "id": "AttachFace",
+                    "type": "Byte"
+                },
+                {
+                    "id": "APX",
+                    "type": "Integer"
+                },
+                {
+                    "id": "APY",
+                    "type": "Integer"
+                },
+                {
+                    "id": "APZ",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Slime",
+            "id": 55,
+            "parent": "Living",
+            "eggColors": [
+                5349438,
+                8306542
+            ],
+            "tags": [
+                {
+                    "id": "Size",
+                    "type": "Integer"
+                },
+                {
+                    "id": "wasOnGround",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "Skeleton",
+            "id": 51,
+            "parent": "Monster",
+            "eggColors": [
+                12698049,
+                4802889
+            ],
+            "tags": [
+                {
+                    "id": "SkeletonType",
+                    "type": "Byte"
+                }
+            ]
+        },
+        {
+            "name": "Silverfish",
+            "id": 60,
+            "parent": "Monster",
+            "eggColors": [
+                7237230,
+                3158064
+            ]
+        },
+        {
+            "name": "PigZombie",
+            "id": 57,
+            "parent": "Zombie",
+            "eggColors": [
+                15373203,
+                5009705
+            ],
+            "tags": [
+                {
+                    "id": "Anger",
+                    "type": "Short"
+                },
+                {
+                    "id": "HurtBy",
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "name": "LavaSlime",
+            "id": 62,
+            "parent": "Slime",
+            "eggColors": [
+                3407872,
+                16579584
+            ]
+        },
+        {
+            "name": "VillagerGolem",
+            "id": 99,
+            "parent": "Golem",
+            "tags": [
+                {
+                    "id": "PlayerCreated",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "Guardian",
+            "id": 68,
+            "parent": "Monster",
+            "eggColors": [
+                5931634,
+                15826224
+            ],
+            "tags": [
+                {
+                    "id": "Elder",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "Giant",
+            "id": 53,
+            "parent": "Monster"
+        },
+        {
+            "name": "Ghast",
+            "id": 56,
+            "parent": "Flying",
+            "eggColors": [
+                16382457,
+                12369084
+            ],
+            "tags": [
+                {
+                    "id": "ExplosionPower",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Endermite",
+            "id": 67,
+            "parent": "Monster",
+            "eggColors": [
+                1447446,
+                7237230
+            ],
+            "tags": [
+                {
+                    "id": "Lifetime",
+                    "type": "Integer"
+                },
+                {
+                    "id": "PlayerSpawned",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "Enderman",
+            "id": 58,
+            "parent": "Monster",
+            "eggColors": [
+                1447446,
+                0
+            ],
+            "tags": [
+                {
+                    "id": "carried",
+                    "type": "String",
+                    "permissions": {
+                        "write": false
+                    }
+                },
+                {
+                    "id": "carried",
+                    "type": "Short",
+                    "deprecated": "String:carried",
+                    "permissions": {
+                        "write": true
+                    }
+                },
+                {
+                    "id": "carriedData",
+                    "type": "Short"
+                }
+            ]
+        },
+        {
+            "name": "Creeper",
+            "id": 50,
+            "parent": "Monster",
+            "eggColors": [
+                894731,
+                0
+            ],
+            "tags": [
+                {
+                    "id": "Fuse",
+                    "type": "Short"
+                },
+                {
+                    "id": "ExplosionRadius",
+                    "type": "Byte"
+                },
+                {
+                    "id": "ignited",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "powered",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "CaveSpider",
+            "id": 59,
+            "parent": "Spider",
+            "eggColors": [
+                803406,
+                11013646
+            ]
+        },
+        {
+            "name": "Blaze",
+            "id": 61,
+            "parent": "Monster",
+            "eggColors": [
+                16167425,
+                16775294
+            ]
+        }
+    ],
+    "block": [
+        {
+            "name": "TileEntity",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "id",
+                    "type": "String",
+                    "permissions": {
+                        "read": false
+                    }
+                },
+                {
+                    "id": "x",
+                    "type": "Integer"
+                },
+                {
+                    "id": "y",
+                    "type": "Integer"
+                },
+                {
+                    "id": "z",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Lockable",
+            "parent": "TileEntity",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "Lock",
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "name": "Lootable",
+            "parent": "Lockable",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "LootTable",
+                    "type": "String"
+                },
+                {
+                    "id": "LootTableSeed",
+                    "type": "Long"
+                }
+            ]
+        },
+        {
+            "name": "Structure",
+            "parent": "TileEntity",
+            "tags": [
+                {
+                    "id": "name",
+                    "type": "String"
+                },
+                {
+                    "id": "author",
+                    "type": "String"
+                },
+                {
+                    "id": "metadata",
+                    "type": "String"
+                },
+                {
+                    "id": "posX",
+                    "type": "Integer"
+                },
+                {
+                    "id": "posY",
+                    "type": "Integer"
+                },
+                {
+                    "id": "posZ",
+                    "type": "Integer"
+                },
+                {
+                    "id": "sizeX",
+                    "type": "Integer"
+                },
+                {
+                    "id": "sizeY",
+                    "type": "Integer"
+                },
+                {
+                    "id": "sizeZ",
+                    "type": "Integer"
+                },
+                {
+                    "id": "mode",
+                    "type": "String"
+                },
+                {
+                    "id": "mirror",
+                    "type": "String"
+                },
+                {
+                    "id": "rotation",
+                    "type": "String"
+                },
+                {
+                    "id": "ignoreEntities",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "Skull",
+            "parent": "TileEntity",
+            "tags": [
+                {
+                    "id": "SkullType",
+                    "type": "Byte"
+                },
+                {
+                    "id": "Rot",
+                    "type": "Byte"
+                },
+                {
+                    "id": "ExtraType",
+                    "type": "String",
+                    "deprecated": "Compound:Owner"
+                },
+                {
+                    "id": "Owner",
+                    "type": "Compound",
+                    "inherit": [
+                        "misc:SkullData"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sign",
+            "parent": "TileEntity",
+            "tags": [
+                {
+                    "id": "Text1",
+                    "type": "String"
+                },
+                {
+                    "id": "Text2",
+                    "type": "String"
+                },
+                {
+                    "id": "Text3",
+                    "type": "String"
+                },
+                {
+                    "id": "Text4",
+                    "type": "String"
+                }
+            ],
+            "inherit": [
+                "misc:CommandStats"
+            ]
+        },
+        {
+            "name": "Piston",
+            "parent": "TileEntity",
+            "tags": [
+                {
+                    "id": "blockId",
+                    "type": "Integer"
+                },
+                {
+                    "id": "blockData",
+                    "type": "Integer"
+                },
+                {
+                    "id": "facing",
+                    "type": "Integer"
+                },
+                {
+                    "id": "progress",
+                    "type": "Float"
+                },
+                {
+                    "id": "extending",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "Music",
+            "parent": "TileEntity",
+            "tags": [
+                {
+                    "id": "note",
+                    "type": "Byte"
+                },
+                {
+                    "id": "powered",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "MobSpawner",
+            "parent": "TileEntity",
+            "inherit": [
+                "misc:SpawnerLogic"
+            ]
+        },
+        {
+            "name": "RecordPlayer",
+            "parent": "TileEntity",
+            "tags": [
+                {
+                    "id": "RecordItem",
+                    "type": "Compound",
+                    "inherit": [
+                        "item:Item"
+                    ]
+                },
+                {
+                    "id": "Record",
+                    "type": "Integer",
+                    "deprecated": "Compound:RecordItem",
+                    "minValues": [1.0]
+                }
+            ]
+        },
+        {
+            "name": "Hopper",
+            "parent": "Lootable",
+            "tags": [
+                {
+                    "id": "CustomName",
+                    "type": "String"
+                },
+                {
+                    "id": "Items",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 5
+                    },
+                    "inherit": [
+                        "item:ItemSlot"
+                    ]
+                },
+                {
+                    "id": "TransferCooldown",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Furnace",
+            "parent": "Lockable",
+            "tags": [
+                {
+                    "id": "CustomName",
+                    "type": "String"
+                },
+                {
+                    "id": "BurnTime",
+                    "type": "Short"
+                },
+                {
+                    "id": "CookTime",
+                    "type": "Short"
+                },
+                {
+                    "id": "CookTimeTotal",
+                    "type": "Short"
+                },
+                {
+                    "id": "Items",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 3
+                    },
+                    "inherit": [
+                        "item:ItemSlot"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FlowerPot",
+            "parent": "TileEntity",
+            "tags": [
+                {
+                    "id": "Item",
+                    "type": "String"
+                },
+                {
+                    "id": "Item",
+                    "type": "Integer",
+                    "deprecated": "String:Item"
+                },
+                {
+                    "id": "Data",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "AirPortal",
+            "parent": "TileEntity"
+        },
+        {
+            "name": "EnderChest",
+            "parent": "TileEntity"
+        },
+        {
+            "name": "EndGateway",
+            "parent": "TileEntity",
+            "tags": [
+                {
+                    "id": "Age",
+                    "type": "Long"
+                },
+                {
+                    "id": "ExactTeleport",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "ExitPortal",
+                    "type": "Compound",
+                    "tags": [
+                        {
+                            "id": "X",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "Y",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "Z",
+                            "type": "Integer"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "EnchantTable",
+            "parent": "TileEntity",
+            "tags": [
+                {
+                    "id": "CustomName",
+                    "type": "String"
+                }
+            ]
+        },
+        {
+            "name": "Dropper",
+            "parent": "Trap"
+        },
+        {
+            "name": "Trap",
+            "parent": "Lootable",
+            "tags": [
+                {
+                    "id": "CustomName",
+                    "type": "String"
+                },
+                {
+                    "id": "Items",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 9
+                    },
+                    "inherit": [
+                        "item:ItemSlot"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "DLDetector",
+            "parent": "TileEntity"
+        },
+        {
+            "name": "Comparator",
+            "parent": "TileEntity",
+            "tags": [
+                {
+                    "id": "OutputSignal",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Control",
+            "parent": "TileEntity",
+            "tags": [
+                {
+                    "id": "powered",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "conditionMet",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "auto",
+                    "type": "Byte",
+                    "isBoolean": true
+                }
+            ],
+            "inherit": [
+                "misc:CommandBlockLogic"
+            ]
+        },
+        {
+            "name": "Chest",
+            "parent": "Lootable",
+            "tags": [
+                {
+                    "id": "CustomName",
+                    "type": "String"
+                },
+                {
+                    "id": "Items",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 27
+                    },
+                    "inherit": [
+                        "item:ItemSlot"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Cauldron",
+            "parent": "Lockable",
+            "tags": [
+                {
+                    "id": "CustomName",
+                    "type": "String"
+                },
+                {
+                    "id": "BrewTime",
+                    "type": "Short"
+                },
+                {
+                    "id": "Fuel",
+                    "type": "Byte"
+                },
+                {
+                    "id": "Items",
+                    "type": "List/Compound",
+                    "keyLimit": {
+                        "max": 5
+                    },
+                    "inherit": [
+                        "item:ItemSlot"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Beacon",
+            "parent": "Lockable",
+            "tags": [
+                {
+                    "id": "Primary",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Secondary",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Levels",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Banner",
+            "parent": "TileEntity",
+            "tags": [
+                {
+                    "id": "Base",
+                    "type": "Integer"
+                },
+                {
+                    "id": "Patterns",
+                    "type": "List/Compound",
+                    "tags": [
+                        {
+                            "id": "Pattern",
+                            "type": "String"
+                        },
+                        {
+                            "id": "Color",
+                            "type": "Integer"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "item": [
+        {
+            "name": "Item",
+            "tags": [
+                {
+                    "id": "id",
+                    "type": "String"
+                },
+                {
+                    "id": "Damage",
+                    "type": "Short"
+                },
+                {
+                    "id": "Count",
+                    "type": "Byte"
+                },
+                {
+                    "id": "tag",
+                    "type": "Compound",
+                    "tags": [
+                        {
+                            "id": "Potion",
+                            "type": "String"
+                        },
+                        {
+                            "id": "Unbreakable",
+                            "type": "Byte",
+                            "isBoolean": true
+                        },
+                        {
+                            "id": "CanDestroy",
+                            "type": "List/String"
+                        },
+                        {
+                            "id": "CanPlaceOn",
+                            "type": "List/String"
+                        },
+                        {
+                            "id": "BlockEntityTag",
+                            "type": "Compound",
+                            "tags": [
+                            
+                            ],
+                            "inherit": [
+                                "block:Banner"
+                            ]
+                        },
+                        {
+                            "id": "EntityTag",
+                            "type": "Compound",
+                            "tags": [
+                                {
+                                    "id": "id",
+                                    "type": "String"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ench",
+                            "type": "List/Compound",
+                            "tags": [
+                                {
+                                    "id": "id",
+                                    "type": "Short"
+                                },
+                                {
+                                    "id": "lvl",
+                                    "type": "Short"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "StoredEnchantments",
+                            "type": "List/Compound",
+                            "tags": [
+                                {
+                                    "id": "id",
+                                    "type": "Short"
+                                },
+                                {
+                                    "id": "lvl",
+                                    "type": "Short"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "RepairCost",
+                            "type": "Integer",
+                            "forced": true
+                        },
+                        {
+                            "id": "AttributeModifiers",
+                            "type": "List/Compound",
+                            "tags": [
+                                {
+                                    "id": "AttributeName",
+                                    "type": "String"
+                                },
+                                {
+                                    "id": "Slot",
+                                    "type": "String"
+                                }
+                            ],
+                            "inherit": [
+                                "misc:AttributeModifiers"
+                            ]
+                        },
+                        {
+                            "id": "CustomPotionEffects",
+                            "type": "List/Compound",
+                            "inherit": [
+                                "misc:CustomPotionEffects"
+                            ]
+                        },
+                        {
+                            "id": "display",
+                            "type": "Compound",
+                            "tags": [
+                                {
+                                    "id": "Name",
+                                    "type": "String"
+                                },
+                                {
+                                    "id": "Lore",
+                                    "type": "List/String"
+                                },
+                                {
+                                    "id": "color",
+                                    "type": "Integer",
+                                    "forced": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": "HideFlags",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "resolved",
+                            "type": "Byte",
+                            "isBoolean": true
+                        },
+                        {
+                            "id": "generation",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "author",
+                            "type": "String"
+                        },
+                        {
+                            "id": "title",
+                            "type": "String"
+                        },
+                        {
+                            "id": "pages",
+                            "type": "List/String"
+                        },
+                        {
+                            "id": "SkullOwner",
+                            "type": "String",
+                            "deprecated": "Compound:SkullOwner"
+                        },
+                        {
+                            "id": "SkullOwner",
+                            "type": "Compound",
+                            "inherit": [
+                                "misc:SkullData"
+                            ]
+                        },
+                        {
+                            "id": "Explosion",
+                            "type": "Compound",
+                            "tags": [
+                                {
+                                    "id": "Flicker",
+                                    "type": "Byte",
+                                    "isBoolean": true
+                                },
+                                {
+                                    "id": "Trail",
+                                    "type": "Byte",
+                                    "isBoolean": true
+                                },
+                                {
+                                    "id": "Type",
+                                    "type": "Byte"
+                                },
+                                {
+                                    "id": "Colors",
+                                    "type": "IntArray"
+                                },
+                                {
+                                    "id": "FadeColors",
+                                    "type": "IntArray"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Fireworks",
+                            "type": "Compound",
+                            "tags": [
+                                {
+                                    "id": "Flight",
+                                    "type": "Byte"
+                                },
+                                {
+                                    "id": "Explosions",
+                                    "type": "List/Compound"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "map_scale_direction",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "map_tracking_position",
+                            "type": "Byte",
+                            "isBoolean": true
+                        },
+                        {
+                            "id": "Decorations",
+                            "type": "List/Compound",
+                            "tags": [
+                                {
+                                    "id": "id",
+                                    "type": "String"
+                                },
+                                {
+                                    "id": "type",
+                                    "type": "Byte"
+                                },
+                                {
+                                    "id": "x",
+                                    "type": "Double"
+                                },
+                                {
+                                    "id": "z",
+                                    "type": "Double"
+                                },
+                                {
+                                    "id": "rot",
+                                    "type": "Double"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ItemSlot",
+            "parent": "Item",
+            "tags": [
+                {
+                    "id": "Slot",
+                    "type": "Byte"
+                }
+            ]
+        }
+    ],
+    "misc": [
+        {
+            "name": "SpawnerLogic",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "Delay",
+                    "type": "Short"
+                },
+                {
+                    "id": "SpawnPotentials",
+                    "type": "List/Compound",
+                    "tags": [
+                        {
+                            "id": "Weight",
+                            "type": "Integer"
+                        },
+                        {
+                            "id": "Entity",
+                            "type": "Compound",
+                            "tags": [
+                                {
+                                    "id": "id",
+                                    "type": "String"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "SpawnData",
+                    "type": "Compound",
+                    "tags": [
+                        {
+                            "id": "id"
+                        }
+                    ]
+                },
+                {
+                    "id": "MinSpawnDelay",
+                    "type": "Short"
+                },
+                {
+                    "id": "MaxSpawnDelay",
+                    "type": "Short"
+                },
+                {
+                    "id": "SpawnCount",
+                    "type": "Short"
+                },
+                {
+                    "id": "MaxNearbyEntities",
+                    "type": "Short"
+                },
+                {
+                    "id": "RequiredPlayerRange",
+                    "type": "Short"
+                },
+                {
+                    "id": "SpawnRange",
+                    "type": "Short"
+                }
+            ]
+        },
+        {
+            "name": "CommandBlockLogic",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "Command",
+                    "type": "String"
+                },
+                {
+                    "id": "SuccessCount",
+                    "type": "Integer"
+                },
+                {
+                    "id": "CustomName",
+                    "type": "String"
+                },
+                {
+                    "id": "TrackOutput",
+                    "type": "Byte",
+                    "isBoolean": true,
+                    "forced": true
+                },
+                {
+                    "id": "LastOutput",
+                    "type": "String"
+                }
+            ],
+            "inherit": [
+                "misc:CommandStats"
+            ]
+        },
+        {
+            "name": "CommandStats",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "CommandStats",
+                    "type": "Compound",
+                    "tags": [
+                        {
+                            "id": "SuccessCountName",
+                            "type": "String"
+                        },
+                        {
+                            "id": "SuccessCountObjective",
+                            "type": "String"
+                        },
+                        {
+                            "id": "AffectedBlocksName",
+                            "type": "String"
+                        },
+                        {
+                            "id": "AffectedBlocksObjective",
+                            "type": "String"
+                        },
+                        {
+                            "id": "AffectedEntitiesName",
+                            "type": "String"
+                        },
+                        {
+                            "id": "AffectedEntitiesObjective",
+                            "type": "String"
+                        },
+                        {
+                            "id": "AffectedItemsName",
+                            "type": "String"
+                        },
+                        {
+                            "id": "AffectedItemsObjective",
+                            "type": "String"
+                        },
+                        {
+                            "id": "QueryResultName",
+                            "type": "String"
+                        },
+                        {
+                            "id": "QueryResultObjective",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "CustomPotionEffects",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "Id",
+                    "type": "Byte"
+                },
+                {
+                    "id": "Amplifier",
+                    "type": "Byte"
+                },
+                {
+                    "id": "Ambient",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
+                    "id": "ShowParticles",
+                    "type": "Byte",
+                    "isBoolean": true,
+                    "forced": true
+                },
+                {
+                    "id": "Duration",
+                    "type": "Integer"
+                }
+            ]
+        },
+        {
+            "name": "Attributes",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "Name",
+                    "type": "String"
+                },
+                {
+                    "id": "Base",
+                    "type": "Double"
+                },
+                {
+                    "id": "Modifiers",
+                    "type": "List/Compound",
+                    "inherit": [
+                        "misc:AttributeModifiers"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "AttributeModifiers",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "Name",
+                    "type": "String",
+                    "minValues": [1.0]
+                },
+                {
+                    "id": "Amount",
+                    "type": "Double"
+                },
+                {
+                    "id": "Operation",
+                    "type": "Integer",
+                    "minValues": [0.0],
+                    "maxValues": [2.0]
+                },
+                {
+                    "id": "UUIDLeast",
+                    "type": "Long"
+                },
+                {
+                    "id": "UUIDMost",
+                    "type": "Long"
+                }
+            ]
+        },
+        {
+            "name": "SkullData",
+            "savegame": false,
+            "tags": [
+                {
+                    "id": "Name",
+                    "type": "String"
+                },
+                {
+                    "id": "Id",
+                    "type": "String"
+                },
+                {
+                    "id": "Properties",
+                    "type": "Compound",
+                    "tags": [
+                        {
+                            "id": "textures",
+                            "type": "List/Compound",
+                            "tags": [
+                                {
+                                    "id": "Signature",
+                                    "type": "String"
+                                },
+                                {
+                                    "id": "Value",
+                                    "type": "String"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
