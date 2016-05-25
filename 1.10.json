@@ -163,6 +163,11 @@
                     "permissions": {
                         "write": false
                     }
+                },
+                {
+                    "id": "FallFlying",
+                    "type": "Byte",
+                    "isBoolean": true
                 }
             ]
         },
@@ -2240,6 +2245,14 @@
                     "id": "powered",
                     "type": "Byte",
                     "isBoolean": true
+                },
+                {
+                    "id": "integrity",
+                    "type": "Float"
+                },
+                {
+                    "id": "seed",
+                    "type": "Long"
                 }
             ]
         },
