@@ -1051,6 +1051,14 @@
                 {
                     "id": "Potion",
                     "type": "String"
+                },
+                {
+                    "id": "ParticleParam1",
+                    "type": "Integer"
+                },
+                {
+                    "id": "ParticleParam2",
+                    "type": "Integer"
                 }
             ]
         },
