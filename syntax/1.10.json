@@ -1,0 +1,2160 @@
+{
+    "syntaxes": {
+        "achievement": [
+            {
+                "raw": "give|take <achievement>|* <@target>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "give|take",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "achievement"
+                            },
+                            {
+                                "name": "@target"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "blockdata": [
+            {
+                "raw": "<X> <Y> <Z> <$NBT...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "clear": [
+            {
+                "raw": "<@player> [<item>] [<data>] [<maximum amount>] [<$NBT...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@player"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "optional": true,
+                                "name": "ID"
+                            },
+                            {
+                                "optional": true,
+                                "name": "Damage"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "optional": true,
+                                "name": "maximum amount"
+                            },
+                            {
+                                "optional": true,
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "clone": [
+            {
+                "raw": "<x1> <y1> <z1> <x2> <y2> <z2> <X> <Y> <Z> [masked|replace|filtered] [force|move|normal] [<ID>] [<blockstate>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "x1"
+                            },
+                            {
+                                "name": "y1"
+                            },
+                            {
+                                "name": "z1"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "x2"
+                            },
+                            {
+                                "name": "y2"
+                            },
+                            {
+                                "name": "z2"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "optional": true,
+                                "name": "masked|replace|filtered",
+                                "type": "literal"
+                            },
+                            {
+                                "optional": true,
+                                "name": "force|move|normal",
+                                "type": "literal"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "optional": true,
+                                "name": "ID"
+                            },
+                            {
+                                "optional": true,
+                                "name": "blockstate"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "defaultgamemode": [
+            {
+                "raw": "<gamemode>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "gamemode"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "difficulty": [
+            {
+                "raw": "<difficulty>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "difficulty"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "effect": [
+            {
+                "raw": "<@target> clear",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "clear",
+                                "type": "literal"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "<@target> <ID> [<duration>] [<amplifier>] [<hide particles>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "ID"
+                            },
+                            {
+                                "name": "duration"
+                            },
+                            {
+                                "name": "amplifier"
+                            },
+                            {
+                                "name": "hide particles"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "enchant": [
+            {
+                "raw": "<@target> <ID> [<level>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@target"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "ID"
+                            },
+                            {
+                                "optional": true,
+                                "name": "level"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "entitydata": [
+            {
+                "raw": "<@target> <$NBT...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "execute": [
+            {
+                "raw": "<@target> <X> <Y> <Z> </command...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@target"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "/command",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "<@target> <X> <Y> <Z> detect <X2> <Y2> <Z2> <block> <meta> </command...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@target"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "detect",
+                                "type": "literal"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "block"
+                            },
+                            {
+                                "name": "meta"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "/command",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "fill": [
+            {
+                "raw": "<x1> <y1> <z1> <x2> <y2> <z2> <ID> [<blockstate>] [destroy|hollow|keep|outline|replace] [<$NBT...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "x1"
+                            },
+                            {
+                                "name": "y1"
+                            },
+                            {
+                                "name": "z1"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "x2"
+                            },
+                            {
+                                "name": "y2"
+                            },
+                            {
+                                "name": "z2"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "ID"
+                            },
+                            {
+                                "optional": true,
+                                "name": "blockstate"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "optional": true,
+                                "name": "destroy|hollow|keep|outline|replace",
+                                "type": "literal"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "optional": true,
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "<x1> <y1> <z1> <x2> <y2> <z2> <ID> <blockstate> replace <replace ID> [<replace blockstate>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "x1"
+                            },
+                            {
+                                "name": "y1"
+                            },
+                            {
+                                "name": "z1"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "x2"
+                            },
+                            {
+                                "name": "y2"
+                            },
+                            {
+                                "name": "z2"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "ID"
+                            },
+                            {
+                                "name": "blockstate"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "replace",
+                                "type": "literal"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "replace ID"
+                            },
+                            {
+                                "optional": true,
+                                "name": "replace blockstate"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "gamemode": [
+            {
+                "raw": "<gamemode> <@player>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "gamemode"
+                            },
+                            {
+                                "name": "@player"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "gamerule": [
+            {
+                "raw": "<rule> [<value>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "rule"
+                            },
+                            {
+                                "optional": true,
+                                "name": "value"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "give": [
+            {
+                "raw": "<@player> <ID> [<Count>] [<Damage>] [<$NBT...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@player"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "ID"
+                            },
+                            {
+                                "optional": true,
+                                "name": "Count"
+                            },
+                            {
+                                "optional": true,
+                                "name": "Damage"
+                            },
+                            {
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "kill": [
+            {
+                "raw": "<@target>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@target"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "list": [
+            {
+                "raw": "[uuids]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "optional": true,
+                                "name": "uuids",
+                                "type": "literal"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "me": [
+            {
+                "raw": "<message...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "message",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "msg": [
+            {
+                "raw": "<@player> <message...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@player"
+                            },
+                            {
+                                "name": "message",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "particle": [
+            {
+                "raw": "<ID> <X> <Y> <Z> <dx> <dy> <dz> <speed> [<count>] [normal|force] [<@player>] [<params...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "ID"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "dx"
+                            },
+                            {
+                                "name": "dy"
+                            },
+                            {
+                                "name": "dz"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "speed"
+                            },
+                            {
+                                "optional": true,
+                                "name": "count"
+                            },
+                            {
+                                "optional": true,
+                                "name": "normal|force",
+                                "type": "literal"
+                            },
+                            {
+                                "optional": true,
+                                "name": "@player"
+                            },
+                            {
+                                "optional": true,
+                                "name": "params",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "playsound": [
+            {
+                "raw": "<ID> <channel> <@player> [<X>] [<Y>] [<Z>] [<volume>] [<pitch>] [<minimum volume>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "ID"
+                            },
+                            {
+                                "name": "channel"
+                            },
+                            {
+                                "name": "@player"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "optional": true,
+                                "name": "X"
+                            },
+                            {
+                                "optional": true,
+                                "name": "Y"
+                            },
+                            {
+                                "optional": true,
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "optional": true,
+                                "name": "volume"
+                            },
+                            {
+                                "optional": true,
+                                "name": "pitch"
+                            },
+                            {
+                                "optional": true,
+                                "name": "minimum volume"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "replaceitem": [
+            {
+                "raw": "block <X> <Y> <Z> <slot> <ID> [<Count>] [<Damage>] [<$NBT...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "block",
+                                "type": "literal"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "slot"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "ID"
+                            },
+                            {
+                                "optional": true,
+                                "name": "Count"
+                            },
+                            {
+                                "optional": true,
+                                "name": "Damage"
+                            },
+                            {
+                                "optional": true,
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "entity <@target> <slot> <ID> [<Count>] [<Damage>] [<$NBT...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "entity",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "slot"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "ID"
+                            },
+                            {
+                                "optional": true,
+                                "name": "Count"
+                            },
+                            {
+                                "optional": true,
+                                "name": "Damage"
+                            },
+                            {
+                                "optional": true,
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "say": [
+            {
+                "raw": "<message...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "message",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "scoreboard": [
+            {
+                "raw": "objectives list",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "objectives",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "list",
+                                "type": "literal"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "objectives add <name> <type> [<display...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "objectives",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "add",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "name"
+                            },
+                            {
+                                "name": "type"
+                            },
+                            {
+                                "optional": true,
+                                "name": "display",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "objectives remove <name>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "objectives",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "remove",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "name"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "objectives setdisplay <slot> [<objective>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "objectives",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "setdisplay",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "slot"
+                            },
+                            {
+                                "optional": true,
+                                "name": "objective"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "players list [<@target>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "players",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "list",
+                                "type": "literal"
+                            },
+                            {
+                                "optional": true,
+                                "name": "@target"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "players set|add|remove <@target> <objective> <value> [<$NBT...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "players",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "set|add|remove",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "objective"
+                            },
+                            {
+                                "name": "value"
+                            },
+                            {
+                                "optional": true,
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "players reset <@target> [<objective>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "players",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "reset",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "optiona": true,
+                                "name": "objective"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "players enable <@target> <objective>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "players",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "enable",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "objective"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "players test <@target> <objective> <minimum> [<maximum>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "players",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "test",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "objective"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "minimum"
+                            },
+                            {
+                                "optional": true,
+                                "name": "maximum"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "players operation <@altered target> <altered objective> =|+=|-=|*=|/=|%=|>|<|>< <@target> <objective>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "players",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "operation",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "@altered target"
+                            },
+                            {
+                                "name": "altered objective"
+                            },
+                            {
+                                "name": "=|+=|-=|*=|/=|%=|>|<|><",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "objective"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "teams list [<name>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "teams",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "list",
+                                "type": "literal"
+                            },
+                            {
+                                "optional": true,
+                                "name": "name"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "teams add <name> [<display...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "teams",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "add",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "name"
+                            },
+                            {
+                                "optional": true,
+                                "name": "display",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "teams remove|empty <name>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "teams",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "remove|empty",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "name"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "teams join <name> <@target...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "teams",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "join",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "name"
+                            },
+                            {
+                                "name": "@target",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "teams leave <@target...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "teams",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "leave",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "@target",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "teams option <team> color|friendlyFire|seeFriendlyInvisibles|nametagVisibility|deathMessageVisibility|collisionRule <value>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "teams",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "option",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "team"
+                            },
+                            {
+                                "name": "color|friendlyFire|seeFriendlyInvisibles|nametagVisibility|deathMessageVisibility|collisionRule",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "value"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "players tag <@target> add|remove <label> [<$NBT...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "players",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "tag",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "add|remove",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "label"
+                            },
+                            {
+                                "optional": true,
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "players tag <@target> list",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "players",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "tag",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "list",
+                                "type": "literal"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "seed": [
+            
+        ],
+        "setblock": [
+            {
+                "raw": "<X> <Y> <Z> <block> [<meta>] [replace|destroy|keep] [<$NBT...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "block"
+                            },
+                            {
+                                "optional": true,
+                                "name": "meta"
+                            }
+                        ]
+                    },
+                    {
+                        "optional": true,
+                        "args": [
+                            {
+                                "name": "replace|destroy|keep",
+                                "type": "literal"
+                            }
+                        ]
+                    },
+                    {
+                        "optional": true,
+                        "args": [
+                            {
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "setworldspawn": [
+            {
+                "raw": "<X> <Y> <Z>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "spawnpoint": [
+            {
+                "raw": "<@target> [<X> <Y> <Z>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@target"
+                            }
+                        ]
+                    },
+                    {
+                        "optional": true,
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "spreadplayers": [
+            {
+                "raw": "<X> <Z> <spread distance> <max range> <respect teams> <@target...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "spread distance"
+                            },
+                            {
+                                "name": "max range"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "respect teams"
+                            },
+                            {
+                                "name": "@target",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "stats": [
+            {
+                "raw": "block <X> <Y> <Z> clear <stat>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "block",
+                                "type": "literal"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "clear",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "stat"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "block <X> <Y> <Z> set <stat> <@stored selector> <objective>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "block",
+                                "type": "literal"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "set",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "stat"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "@stored selector"
+                            },
+                            {
+                                "name": "objective"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "entity <@target> clear <stat>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "entity",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "clear",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "stat"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "entity <@target> set <stat> <@stored selector> <objective>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "entity",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "set",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "stat"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "@stored selector"
+                            },
+                            {
+                                "name": "objective"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "stop": [],
+        "stopsound": [
+            {
+                "raw": "<@player> [<channel>] [<ID>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@player"
+                            },
+                            {
+                                "optional": true,
+                                "name": "channel"
+                            },
+                            {
+                                "optional": true,
+                                "name": "ID"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "summon": [
+            {
+                "raw": "<entity> [<X> <Y> <Z>] [<$NBT...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "entity"
+                            }
+                        ]
+                    },
+                    {
+                        "optional": true,
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "optional": true,
+                        "args": [
+                            {
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "teleport": [
+            {
+                "raw": "<@target> <X> <Y> <Z> [<y-rot>] [<x-rot>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@target"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "optional": true,
+                                "name": "y-rot"
+                            },
+                            {
+                                "optional": true,
+                                "name": "x-rot"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "tell": [
+            {
+                "raw": "<@player> <message...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@player"
+                            },
+                            {
+                                "name": "message",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "tellraw": [
+            {
+                "raw": "<@player> <!JSON...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@player"
+                            },
+                            {
+                                "name": "!JSON",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "testfor": [
+            {
+                "raw": "<@target> [<$NBT...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "optional": true,
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "testforblock": [
+            {
+                "raw": "<X> <Y> <Z> <ID> [<blockstate>] [<$NBT...>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "ID"
+                            },
+                            {
+                                "optional": true,
+                                "name": "blockstate"
+                            },
+                            {
+                                "optional": true,
+                                "name": "$NBT",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "testforblocks": [
+            {
+                "raw": "<x1> <y1> <z1> <x2> <y2> <z2> <X> <Y> <Z> [all|masked]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "x1"
+                            },
+                            {
+                                "name": "y1"
+                            },
+                            {
+                                "name": "z1"
+                            },
+                            {
+                                "name": "x2"
+                            },
+                            {
+                                "name": "y2"
+                            },
+                            {
+                                "name": "z2"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "optional": true,
+                                "name": "all|masked",
+                                "type": "literal"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "time": [
+            {
+                "raw": "add <value>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "add",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "value"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "set day|night",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "set",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "day|night",
+                                "type": "literal"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "query day|daytime|gametime",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "query",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "day|daytime|gametime",
+                                "type": "literal"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "title": [
+            {
+                "raw": "<@player> clear|reset"
+            },
+            {
+                "raw": "<@player> title|subtitle <!JSON...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@player"
+                            },
+                            {
+                                "name": "title|subtitle",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "!JSON",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "<@player> times <fade in> <pause> <fade out>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@player"
+                            },
+                            {
+                                "name": "times",
+                                "type": "literal"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "fade in"
+                            },
+                            {
+                                "name": "pause"
+                            },
+                            {
+                                "name": "fade out"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "toggledownfall": [],
+        "tp": [
+            {
+                "raw": "<@target> <@destination>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@target"
+                            },
+                            {
+                                "name": "@destination"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "<@target> <X> <Y> <Z> [<y-rot> <x-rot>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@target"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Y"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    },
+                    {
+                        "optional": true,
+                        "args": [
+                            {
+                                "name": "y-rot"
+                            },
+                            {
+                                "name": "x-rot"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "trigger": [
+            {
+                "raw": "<objective> add|set <value>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "objective"
+                            },
+                            {
+                                "name": "add|set",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "value"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "w": [
+            {
+                "raw": "<@player> <message...>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "@player"
+                            },
+                            {
+                                "name": "message",
+                                "type": "argument_list"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "weather": [
+            {
+                "raw": "rain|thunder|clear [<duration>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "rain|thunder|clear",
+                                "type": "literal"
+                            },
+                            {
+                                "optional": true,
+                                "name": "duration"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "worldborder": [
+            {
+                "raw": "add|set <distance> [<time>]",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "add|set",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "distance"
+                            },
+                            {
+                                "optional": true,
+                                "name": "time"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "warning distance|time <value>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "warning",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "distance|time",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "value"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "damage amount|buffer <value>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "damage",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "amount|buffer",
+                                "type": "literal"
+                            },
+                            {
+                                "name": "value"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "get",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "get",
+                                "type": "literal"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "raw": "center <X> <Z>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "center",
+                                "type": "literal"
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            {
+                                "name": "X"
+                            },
+                            {
+                                "name": "Z"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "xp": [
+            {
+                "raw": "<amount> <@player>",
+                "groups": [
+                    {
+                        "args": [
+                            {
+                                "name": "amount"
+                            },
+                            {
+                                "name": "@player"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
