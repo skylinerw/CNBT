@@ -778,12 +778,14 @@
             ]
         },
         {
-            "name": "MinecartRideable",
+            "name": "minecart",
+            "alias": "MinecartRideable",
             "id": 42,
             "parent": "MinecartBase"
         },
         {
-            "name": "MinecartFurnace",
+            "name": "furnace_minecart",
+            "alias": "MinecartFurnace",
             "id": 44,
             "parent": "MinecartBase",
             "tags": [
@@ -802,7 +804,8 @@
             ]
         },
         {
-            "name": "MinecartChest",
+            "name": "chest_minecart",
+            "alias": "MinecartChest",
             "id": 43,
             "parent": "MinecartLootable",
             "tags": [
@@ -819,7 +822,8 @@
             ]
         },
         {
-            "name": "MinecartHopper",
+            "name": "hopper_minecart",
+            "alias": "MinecartHopper",
             "id": 46,
             "parent": "MinecartLootable",
             "tags": [
@@ -845,7 +849,8 @@
             ]
         },
         {
-            "name": "MinecartSpawner",
+            "name": "spawner_minecart",
+            "alias": "MinecartSpawner",
             "id": 47,
             "parent": "MinecartBase",
             "inherit": [
@@ -853,7 +858,8 @@
             ]
         },
         {
-            "name": "MinecartTNT",
+            "name": "tnt_minecart",
+            "alias": "MinecartTNT",
             "id": 45,
             "parent": "MinecartBase",
             "tags": [
@@ -864,7 +870,8 @@
             ]
         },
         {
-            "name": "MinecartCommandBlock",
+            "name": "commandblock_minecart",
+            "alias": "MinecartCommandBlock",
             "id": 40,
             "parent": "MinecartBase",
             "inherit": [
@@ -872,7 +879,8 @@
             ]
         },
         {
-            "name": "ShulkerBullet",
+            "name": "shulker_bullet",
+            "alias": "ShulkerBullet",
             "id": 25,
             "parent": "Entity",
             "tags": [
@@ -951,24 +959,28 @@
             ]
         },
         {
-            "name": "LeashKnot",
+            "name": "leash_knot",
+            "alias": "LeashKnot",
             "id": 8,
             "parent": "Hanging",
             "ignoreInheritance": true,
             "disk": false
         },
         {
-            "name": "WitherSkull",
+            "name": "wither_skull",
+            "alias": "WitherSkull",
             "id": 19,
             "parent": "FireballBase"
         },
         {
-            "name": "SmallFireball",
+            "name": "small_fireball",
+            "alias": "SmallFireball",
             "id": 13,
             "parent": "FireballBase"
         },
         {
-            "name": "Fireball",
+            "name": "fireball",
+            "alias": "Fireball",
             "id": 12,
             "parent": "FireballBase",
             "tags": [
@@ -979,17 +991,20 @@
             ]
         },
         {
-            "name": "DragonFireball",
+            "name": "dragon_fireball",
+            "alias": "DragonFireball",
             "id": 26,
             "parent": "FireballBase"
         },
         {
-            "name": "Snowball",
+            "name": "snowball",
+            "alias": "Snowball",
             "id": 11,
             "parent": "Throwable"
         },
         {
-            "name": "AreaEffectCloud",
+            "name": "area_effect_cloud",
+            "alias": "AreaEffectCloud",
             "id": 3,
             "parent": "Entity",
             "tags": [
@@ -1063,7 +1078,8 @@
             ]
         },
         {
-            "name": "ThrownPotion",
+            "name": "potion",
+            "alias": "ThrownPotion",
             "id": 16,
             "parent": "Throwable",
             "tags": [
@@ -1077,12 +1093,14 @@
             ]
         },
         {
-            "name": "ThrownEgg",
+            "name": "egg",
+            "alias": "ThrownEgg",
             "id": 7,
             "parent": "Throwable"
         },
         {
-            "name": "Arrow",
+            "name": "arrow",
+            "alias": "Arrow",
             "id": 10,
             "parent": "ArrowBase",
             "tags": [
@@ -1100,7 +1118,8 @@
             ]
         },
         {
-            "name": "SpectralArrow",
+            "name": "spectral_arrow",
+            "alias": "SpectralArrow",
             "id": 24,
             "parent": "ArrowBase",
             "tags": [
@@ -1111,7 +1130,8 @@
             ]
         },
         {
-            "name": "XPOrb",
+            "name": "xp_orb",
+            "alias": "XPOrb",
             "id": 2,
             "parent": "Entity",
             "tags": [
@@ -1130,7 +1150,8 @@
             ]
         },
         {
-            "name": "PrimedTnt",
+            "name": "tnt",
+            "alias": "PrimedTnt",
             "id": 20,
             "parent": "Entity",
             "tags": [
@@ -1141,7 +1162,8 @@
             ]
         },
         {
-            "name": "Painting",
+            "name": "painting",
+            "alias": "Painting",
             "id": 9,
             "parent": "Hanging",
             "tags": [
@@ -1152,7 +1174,8 @@
             ]
         },
         {
-            "name": "ItemFrame",
+            "name": "item_frame",
+            "alias": "ItemFrame",
             "id": 18,
             "parent": "Hanging",
             "tags": [
@@ -1176,7 +1199,8 @@
             ]
         },
         {
-            "name": "Item",
+            "name": "item",
+            "alias": "Item",
             "id": 1,
             "parent": "Entity",
             "tags": [
@@ -1210,7 +1234,8 @@
             ]
         },
         {
-            "name": "FireworksRocketEntity",
+            "name": "fireworks_rocket",
+            "alias": "FireworksRocketEntity",
             "id": 22,
             "parent": "Entity",
             "tags": [
@@ -1232,7 +1257,8 @@
             ]
         },
         {
-            "name": "FallingSand",
+            "name": "falling_block",
+            "alias": "FallingSand",
             "id": 21,
             "parent": "Entity",
             "tags": [
@@ -1283,22 +1309,26 @@
             ]
         },
         {
-            "name": "ThrownExpBottle",
+            "name": "xp_bottle",
+            "alias": "ThrownExpBottle",
             "id": 17,
             "parent": "Throwable"
         },
         {
-            "name": "ThrownEnderpearl",
+            "name": "ender_pearl",
+            "alias": "ThrownEnderpearl",
             "id": 14,
             "parent": "Throwable"
         },
         {
-            "name": "EyeOfEnderSignal",
+            "name": "eye_of_ender_signal",
+            "alias": "EyeOfEnderSignal",
             "id": 15,
             "parent": "Entity"
         },
         {
-            "name": "EnderCrystal",
+            "name": "ender_crystal",
+            "alias": "EnderCrystal",
             "id": 200,
             "parent": "Entity",
             "tags": [
@@ -1329,7 +1359,8 @@
             ]
         },
         {
-            "name": "Boat",
+            "name": "boat",
+            "alias": "Boat",
             "id": 41,
             "parent": "Entity",
             "tags": [
@@ -1340,7 +1371,8 @@
             ]
         },
         {
-            "name": "ArmorStand",
+            "name": "armor_stand",
+            "alias": "ArmorStand",
             "id": 30,
             "parent": "LivingBase",
             "tags": [
@@ -1449,13 +1481,15 @@
             "savegame": false
         },
         {
-            "name": "LightningBolt",
+            "name": "lightning_bolt",
+            "alias": "LightningBolt",
             "parent": "WeatherEffect",
             "savegame": false,
             "ignoreInheritance": true
         },
         {
-            "name": "EnderDragon",
+            "name": "ender_dragon",
+            "alias": "EnderDragon",
             "id": 63,
             "parent": "Living",
             "tags": [
@@ -1471,7 +1505,8 @@
             "savegame": false
         },
         {
-            "name": "WitherBoss",
+            "name": "wither",
+            "alias": "WitherBoss",
             "id": 64,
             "parent": "Monster",
             "tags": [
@@ -1482,7 +1517,8 @@
             ]
         },
         {
-            "name": "Wolf",
+            "name": "wolf",
+            "alias": "Wolf",
             "id": 95,
             "parent": "Tameable",
             "eggColors": [
@@ -1502,7 +1538,8 @@
             ]
         },
         {
-            "name": "Villager",
+            "name": "villager",
+            "alias": "Villager",
             "id": 120,
             "parent": "Ageable",
             "eggColors": [
@@ -1588,7 +1625,8 @@
             ]
         },
         {
-            "name": "Squid",
+            "name": "squid",
+            "alias": "Squid",
             "id": 94,
             "parent": "WaterMob",
             "eggColors": [
@@ -1597,7 +1635,8 @@
             ]
         },
         {
-            "name": "Sheep",
+            "name": "sheep",
+            "alias": "Sheep",
             "id": 91,
             "parent": "Animal",
             "eggColors": [
@@ -1617,7 +1656,8 @@
             ]
         },
         {
-            "name": "Rabbit",
+            "name": "rabbit",
+            "alias": "Rabbit",
             "id": 101,
             "parent": "Animal",
             "eggColors": [
@@ -1636,7 +1676,8 @@
             ]
         },
         {
-            "name": "PolarBear",
+            "name": "polar_bear",
+            "alias": "PolarBear",
             "id": 102,
             "parent": "Animal",
             "eggColors": [
@@ -1645,7 +1686,8 @@
             ]
         },
         {
-            "name": "Pig",
+            "name": "pig",
+            "alias": "Pig",
             "id": 90,
             "parent": "Animal",
             "eggColors": [
@@ -1661,7 +1703,8 @@
             ]
         },
         {
-            "name": "Ozelot",
+            "name": "ocelot",
+            "alias": "Ozelot",
             "id": 98,
             "parent": "Tameable",
             "eggColors": [
@@ -1676,22 +1719,19 @@
             ]
         },
         {
-            "name": "MushroomCow",
+            "name": "mooshroom",
+            "alias": "MushroomCow",
             "id": 96,
-            "parent": "Cow",
+            "parent": "cow",
             "eggColors": [
                 10489616,
                 12040119
             ]
         },
         {
-            "name": "EntityHorse",
-            "id": 100,
+            "name": "HorseBase",
+            "savegame": false,
             "parent": "Animal",
-            "eggColors": [
-                12623485,
-                15656192
-            ],
             "tags": [
                 {
                     "id": "EatingHaystack",
@@ -1702,24 +1742,6 @@
                     "id": "Bred",
                     "type": "Byte",
                     "isBoolean": true
-                },
-                {
-                    "id": "ChestedHorse",
-                    "type": "Byte",
-                    "isBoolean": true
-                },
-                {
-                    "id": "HasReproduced",
-                    "type": "Byte",
-                    "isBoolean": true
-                },
-                {
-                    "id": "Type",
-                    "type": "Integer"
-                },
-                {
-                    "id": "Variant",
-                    "type": "Integer"
                 },
                 {
                     "id": "Temper",
@@ -1740,6 +1762,25 @@
                     "deprecated": "String:OwnerUUID"
                 },
                 {
+                    "id": "SaddleItem",
+                    "type": "Compound",
+                    "inherit": [
+                        "item:Item"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "HorseChested",
+            "savegame": false,
+            "parent": "HorseBase",
+            "tags": [
+                {
+                    "id": "ChestedHorse",
+                    "type": "Byte",
+                    "isBoolean": true
+                },
+                {
                     "id": "Items",
                     "type": "List/Compound",
                     "keyLimit": {
@@ -1748,6 +1789,22 @@
                     "inherit": [
                         "item:ItemSlot"
                     ]
+                }
+            ]
+        },
+        {
+            "name": "horse",
+            "alias": "EntityHorse",
+            "id": 100,
+            "parent": "HorseBase",
+            "eggColors": [
+                12623485,
+                15656192
+            ],
+            "tags": [
+                {
+                    "id": "Variant",
+                    "type": "Integer"
                 },
                 {
                     "id": "ArmorItem",
@@ -1755,14 +1812,19 @@
                     "inherit": [
                         "item:Item"
                     ]
-                },
-                {
-                    "id": "SaddleItem",
-                    "type": "Compound",
-                    "inherit": [
-                        "item:Item"
-                    ]
-                },
+                }
+            ]
+        },
+        {
+            "name": "skeleton_horse",
+            "alias": "SkeletonHorse",
+            "id": 28,
+            "parent": "HorseBase",
+            "eggColors": [
+                6842447,
+                15066584
+            ],
+            "tags": [
                 {
                     "id": "SkeletonTrap",
                     "type": "Byte",
@@ -1775,7 +1837,38 @@
             ]
         },
         {
-            "name": "Cow",
+            "name": "zombie_horse",
+            "alias": "ZombieHorse",
+            "id": 29,
+            "parent": "HorseBase",
+            "eggColors": [
+                3232308,
+                9945732
+            ]
+        },
+        {
+            "name": "donkey",
+            "alias": "donkey",
+            "id": 31,
+            "parent": "HorseChested",
+            "eggColors": [
+                5457209,
+                8811878
+            ]
+        },
+        {
+            "name": "mule",
+            "alias": "Mule",
+            "id": 32,
+            "parent": "HorseChested",
+            "eggColors": [
+                1769984,
+                5321501
+            ]
+        },
+        {
+            "name": "cow",
+            "alias": "Cow",
             "id": 92,
             "parent": "Animal",
             "eggColors": [
@@ -1784,7 +1877,8 @@
             ]
         },
         {
-            "name": "Chicken",
+            "name": "chicken",
+            "alias": "Chicken",
             "id": 93,
             "parent": "Animal",
             "eggColors": [
@@ -1804,7 +1898,8 @@
             ]
         },
         {
-            "name": "Bat",
+            "name": "bat",
+            "alias": "Bat",
             "id": 65,
             "parent": "Ambient",
             "eggColors": [
@@ -1819,7 +1914,8 @@
             ]
         },
         {
-            "name": "Zombie",
+            "name": "zombie",
+            "alias": "Zombie",
             "id": 54,
             "parent": "Monster",
             "eggColors": [
@@ -1833,33 +1929,45 @@
                     "isBoolean": true
                 },
                 {
-                    "id": "IsVillager",
+                    "id": "CanBreakDoors",
                     "type": "Byte",
-                    "isBoolean": true,
-                    "deprecated": "Integer:ZombieType"
-                },
+                    "isBoolean": true
+                }
+            ]
+        },
+        {
+            "name": "husk",
+            "alias": "Husk",
+            "id": 23,
+            "parent": "zombie",
+            "eggColors": [
+                7958625,
+                15125652
+            ]
+        },
+        {
+            "name": "zombie_villager",
+            "alias": "ZombieVillager",
+            "id": 27,
+            "parent": "zombie",
+            "eggColors": [
+                5651507,
+                7969893
+            ],
+            "tags": [
                 {
                     "id": "ConversionTime",
                     "type": "Integer"
                 },
                 {
-                    "id": "CanBreakDoors",
-                    "type": "Byte",
-                    "isBoolean": true
-                },
-                {
-                    "id": "VillagerProfession",
-                    "type": "Integer",
-                    "deprecated": "Integer:ZombieType"
-                },
-                {
-                    "id": "ZombieType",
+                    "id": "Profession",
                     "type": "Integer"
                 }
             ]
         },
         {
-            "name": "Witch",
+            "name": "witch",
+            "alias": "Witch",
             "id": 66,
             "parent": "Monster",
             "eggColors": [
@@ -1868,7 +1976,8 @@
             ]
         },
         {
-            "name": "Spider",
+            "name": "spider",
+            "alias": "Spider",
             "id": 52,
             "parent": "Monster",
             "eggColors": [
@@ -1877,12 +1986,14 @@
             ]
         },
         {
-            "name": "SnowMan",
+            "name": "snowman",
+            "alias": "SnowMan",
             "id": 97,
             "parent": "Golem"
         },
         {
-            "name": "Shulker",
+            "name": "shulker",
+            "alias": "Shulker",
             "id": 69,
             "parent": "Golem",
             "eggColors": [
@@ -1913,7 +2024,8 @@
             ]
         },
         {
-            "name": "Slime",
+            "name": "slime",
+            "alias": "Slime",
             "id": 55,
             "parent": "Living",
             "eggColors": [
@@ -1933,22 +2045,43 @@
             ]
         },
         {
-            "name": "Skeleton",
+            "name": "SkeletonBase",
+            "savegame": false,
+            "parent": "Monster"
+        },
+        {
+            "name": "skeleton",
+            "alias": "Skeleton",
             "id": 51,
-            "parent": "Monster",
+            "parent": "SkeletonBase",
             "eggColors": [
                 12698049,
                 4802889
-            ],
-            "tags": [
-                {
-                    "id": "SkeletonType",
-                    "type": "Byte"
-                }
             ]
         },
         {
-            "name": "Silverfish",
+            "name": "wither_skeleton",
+            "alias": "WitherSkeleton",
+            "id": 5,
+            "parent": "SkeletonBase",
+            "eggColors": [
+                1315860,
+                4672845
+            ]
+        },
+        {
+            "name": "stray",
+            "alias": "Stray",
+            "id": 6,
+            "parent": "SkeletonBase",
+            "eggColors": [
+                1315860,
+                4672845
+            ]
+        },
+        {
+            "name": "silverfish",
+            "alias": "Silverfish",
             "id": 60,
             "parent": "Monster",
             "eggColors": [
@@ -1957,9 +2090,10 @@
             ]
         },
         {
-            "name": "PigZombie",
+            "name": "zombie_pigman",
+            "alias": "PigZombie",
             "id": 57,
-            "parent": "Zombie",
+            "parent": "zombie",
             "eggColors": [
                 15373203,
                 5009705
@@ -1976,16 +2110,18 @@
             ]
         },
         {
-            "name": "LavaSlime",
+            "name": "magma_cube",
+            "alias": "LavaSlime",
             "id": 62,
-            "parent": "Slime",
+            "parent": "slime",
             "eggColors": [
                 3407872,
                 16579584
             ]
         },
         {
-            "name": "VillagerGolem",
+            "name": "villager_golem",
+            "alias": "VillagerGolem",
             "id": 99,
             "parent": "Golem",
             "tags": [
@@ -1997,28 +2133,34 @@
             ]
         },
         {
-            "name": "Guardian",
+            "name": "guardian",
+            "alias": "Guardian",
             "id": 68,
             "parent": "Monster",
             "eggColors": [
                 5931634,
                 15826224
-            ],
-            "tags": [
-                {
-                    "id": "Elder",
-                    "type": "Byte",
-                    "isBoolean": true
-                }
             ]
         },
         {
-            "name": "Giant",
+            "name": "elder_guardian",
+            "alias": "ElderGuardian",
+            "id": 4,
+            "parent": "guardian",
+            "eggColors": [
+                13552826,
+                7632531
+            ]
+        },
+        {
+            "name": "giant",
+            "alias": "Giant",
             "id": 53,
             "parent": "Monster"
         },
         {
-            "name": "Ghast",
+            "name": "ghast",
+            "alias": "Ghast",
             "id": 56,
             "parent": "Flying",
             "eggColors": [
@@ -2033,7 +2175,8 @@
             ]
         },
         {
-            "name": "Endermite",
+            "name": "endermite",
+            "alias": "Endermite",
             "id": 67,
             "parent": "Monster",
             "eggColors": [
@@ -2053,7 +2196,8 @@
             ]
         },
         {
-            "name": "Enderman",
+            "name": "enderman",
+            "alias": "Enderman",
             "id": 58,
             "parent": "Monster",
             "eggColors": [
@@ -2083,7 +2227,8 @@
             ]
         },
         {
-            "name": "Creeper",
+            "name": "creeper",
+            "alias": "Creeper",
             "id": 50,
             "parent": "Monster",
             "eggColors": [
@@ -2112,16 +2257,18 @@
             ]
         },
         {
-            "name": "CaveSpider",
+            "name": "cave_spider",
+            "alias": "CaveSpider",
             "id": 59,
-            "parent": "Spider",
+            "parent": "spider",
             "eggColors": [
                 803406,
                 11013646
             ]
         },
         {
-            "name": "Blaze",
+            "name": "blaze",
+            "alias": "Blaze",
             "id": 61,
             "parent": "Monster",
             "eggColors": [
