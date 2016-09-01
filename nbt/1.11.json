@@ -2789,6 +2789,10 @@
             "parent": "TileEntity",
             "tags": [
                 {
+                    "id": "CustomName",
+                    "type": "String"
+                },
+                {
                     "id": "Base",
                     "type": "Integer"
                 },
